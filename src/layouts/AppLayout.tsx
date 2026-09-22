@@ -65,16 +65,15 @@ export function AppLayout({ user, route, onNavigate, onLogout, children }: Props
           >
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
-          <div className="flex items-center gap-2">
+          <div className="hidden items-center gap-2 md:flex">
             <span className="flex h-8 w-8 items-center justify-center rounded-md bg-[#1e3a5f] text-sm font-bold text-white" aria-hidden="true">
               A
             </span>
             <div className="leading-tight">
-              <p className="text-sm font-semibold text-gray-900">Attendly</p>
               <p className="text-xs text-gray-500">Employee Attendance & Payroll System</p>
             </div>
           </div>
-          <div className="ml-auto flex items-center gap-3">
+          <div className="ml-auto hidden items-center gap-3 md:flex">
             <span className="hidden text-sm text-gray-600 sm:block">
               {user.name} <span className="text-gray-400">· {user.role === 'admin' ? 'Admin' : user.employeeId}</span>
             </span>
