@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --color-brand-50: #f0f4f9;
+  --color-brand-100: #dce6f2;
+  --color-brand-600: #1e3a5f;
+  --color-brand-700: #172e4c;
+  --color-brand-800: #12243c;
+}
+
+html {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #f3f4f6;
+  color: #111827;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Restrained enterprise design tokens */
+:root {
+  --radius: 6px;
+  --border: #e5e7eb;
+  --surface: #ffffff;
+}
+
+/* Consistent focus state */
+*:focus-visible {
+  outline: 2px solid #1e3a5f;
+  outline-offset: 2px;
+}
+
+/* Table scroll container for mobile */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Subtle card */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* Monospace for debug values */
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+}
